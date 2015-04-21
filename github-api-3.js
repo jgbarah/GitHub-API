@@ -84,7 +84,12 @@ $(document).ready(function() {
 	alert('Signin error: ' + e.error.message);
     });
     auth = hello("github").getAuthResponse();
-    console.log (auth);
-    $("div#form button").click(getRepo);
+    token = auth.access_token;
+    console.log (token);
+    github = new Github({
+	token: token,
+	auth: "oauth"
+    });
+    $("#repoform").html(repoHTML);
     
 });
