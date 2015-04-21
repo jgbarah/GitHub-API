@@ -78,7 +78,7 @@ $(document).ready(function() {
 	oauth_proxy : "https://auth-server.herokuapp.com/proxy"
     });
     access = hello("github");
-    access.login().then( function(){
+    access.login({response_type: 'code'}).then( function(){
 	alert('You are signed in to Facebook');
     }, function( e ){
 	alert('Signin error: ' + e.error.message);
