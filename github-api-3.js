@@ -79,10 +79,12 @@ $(document).ready(function() {
     });
     access = hello("github");
     access.login({response_type: 'code'}).then( function(){
-	alert('You are signed in to Facebook');
+	alert('You are signed in to GitHub');
     }, function( e ){
 	alert('Signin error: ' + e.error.message);
     });
+    auth = hello("github").getAuthResponse();
+    console.log (auth);
     $("div#form button").click(getRepo);
     
 });

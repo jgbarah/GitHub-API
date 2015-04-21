@@ -18,5 +18,5 @@ wget https://raw.githubusercontent.com/michael/github/master/github.js
 
 ## Setting up GitHub
 
-* Register a OAuth application with GitHub. For homepage url, I use http://jgbarah.github.io/GitHub-API, for auth callback I use https://auth-server.herokuapp.com/proxy
-* Save the data (refernce, domain, client_id, client_secret) with a OAuth proxy. I use https://auth-server.herokuapp.com/
+* Register a OAuth application with GitHub. For homepage url, I use http://jgbarah.github.io/GitHub-API, for auth callback I use http://jgbarah.github.io/GitHub-API/redirect.html
+* Save the data (reference, domain, client_id, client_secret) with a OAuth proxy. I use https://auth-server.herokuapp.com/. Reference: a name for identifying the entry, domain: https://jgbarah.github.io, client_id, client_secret
