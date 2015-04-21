@@ -90,6 +90,8 @@ $(document).ready(function() {
 	token: token,
 	auth: "oauth"
     });
-    $("#repoform").html(repoHTML);
-    
+
+    $("#repoform").html(repoHTML)
+    $("div#form button").click(getRepo);
+
 });
