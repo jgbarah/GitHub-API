@@ -4,7 +4,7 @@ var repoHTML = "<input type='text' name='user' value='jgbarah' " +
     "id='user' size='10' />" +
     "<input type='text' name='repo' value='GitHub-API' " +
     "id='repo' size='10' />" +
-    "<button type='button'>Grab repo data</button>" +
+    "<button id='repobutton' type='button'>Grab repo data</button>" +
     "<div id='repodata'/>";
 
 var github;
@@ -92,6 +92,6 @@ $(document).ready(function() {
     });
 
     $("#repoform").html(repoHTML)
-    $("div#form button").click(getRepo);
+    $("#repobutton").click(getRepo);
 
 });
