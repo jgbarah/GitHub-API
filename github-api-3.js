@@ -79,19 +79,16 @@ $(document).ready(function() {
     });
     access = hello("github");
     access.login({response_type: 'code'}).then( function(){
-	alert('You are signed in to GitHub');
+	auth = hello("github").getAuthResponse();
+	token = auth.access_token;
+	console.log (token);
+	github = new Github({
+	    token: token,
+	    auth: "oauth"
+	});
+	$("#repoform").html(repoHTML);
+	$("#repobutton").click(getRepo);
     }, function( e ){
 	alert('Signin error: ' + e.error.message);
     });
-    auth = hello("github").getAuthResponse();
-    token = auth.access_token;
-    console.log (token);
-    github = new Github({
-	token: token,
-	auth: "oauth"
-    });
-
-    $("#repoform").html(repoHTML)
-    $("#repobutton").click(getRepo);
-
 });
